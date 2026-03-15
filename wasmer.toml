@@ -1,0 +1,33 @@
+[package]
+name = "dlyl-shwqy-end"
+version = "0.1.1"
+description = "Shawky Construction Management System"
+
+[[module]]
+name = "app"
+source = "."
+abi = "none"
+
+[module.interfaces]
+
+[dependencies]
+
+[fs]
+"/app" = "."
+
+[[command]]
+name = "start"
+module = "app"
+runner = "https://webc.org/runner/wasi"
+
+[command.annotations.wasi]
+main-args = ["npm", "start"]
+env = ["NODE_ENV=production", "PORT=3000"]
+
+[[command]]
+name = "build"
+module = "app"
+runner = "https://webc.org/runner/wasi"
+
+[command.annotations.wasi]
+main-args = ["npm", "run", "build"]

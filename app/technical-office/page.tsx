@@ -102,15 +102,10 @@ export default function TechnicalOfficePage() {
   }, [])
 
   const handleAreaClick = (areaId: number) => {
-    // إذا كان المستخدم لديه صلاحية على هذه المنطقة، يدخل مباشرة
-    if (userPermissions.includes(areaId)) {
-      const area = areas.find(a => a.id === areaId)
-      if (area?.driveLink) {
-        window.location.href = area.driveLink
-      }
-    } else {
-      // وإلا يذهب لصفحة تسجيل الدخول
-      router.push(`/technical-office/login?area=${areaId}`)
+    // الوصول المباشر للمنطقة بدون تسجيل دخول
+    const area = areas.find(a => a.id === areaId)
+    if (area?.driveLink) {
+      window.location.href = area.driveLink
     }
   }
 
@@ -185,9 +180,7 @@ export default function TechnicalOfficePage() {
                     className="flex items-center justify-center gap-3 w-full py-4 px-6 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl transition-all font-bold shadow-lg hover:shadow-xl hover:scale-105 duration-300 h-auto"
                   >
                     <FolderOpen className="w-6 h-6" />
-                    <span className="text-lg">
-                      {userPermissions.includes(area.id) ? "فتح الملفات" : "تسجيل الدخول"}
-                    </span>
+                    <span className="text-lg">فتح الملفات</span>
                   </Button>
                 </div>
               </Card>

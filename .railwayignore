@@ -1,0 +1,15 @@
+# Railway Ignore File
+# Files and folders to exclude from Railway deployment
+
+# Development files
+node_modules/
+.git/
+.next/cache/
+
+# Documentation (keep images!)
+# *.md files are already in .gitignore but we want images
+
+# Keep all images
+!public/**
+!public/images/**
+!public/images/**/*

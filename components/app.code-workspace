@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../app"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../hooks"
+		},
+		{
+			"path": "../lib"
+		},
+		{
+			"path": "../public"
+		},
+		{
+			"path": "../styles"
+		}
+	],
+	"settings": {
+		"kiroAgent.configureMCP": "Disabled"
+	}
+}

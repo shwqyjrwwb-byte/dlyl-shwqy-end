@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Cairo } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { FinishingStagesBackground } from "@/components/finishing-stages-background"
 import { AudioPlayer } from "@/components/audio-player"
 import "./globals.css"
@@ -48,7 +47,6 @@ export default function RootLayout({
         <FinishingStagesBackground />
         <AudioPlayer audioUrl="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1%20%281%29-aoeBYNORIRtr3jO0CEva9poU6ELqs0.mp3" />
         {children}
-        <Analytics />
       </body>
     </html>
   )

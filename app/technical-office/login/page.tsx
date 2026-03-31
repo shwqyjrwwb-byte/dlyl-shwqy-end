@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -65,6 +65,14 @@ const adminCredentials = [
 ]
 
 export default function TechnicalOfficeLoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center"><div className="w-8 h-8 border-2 border-t-primary border-primary/20 rounded-full animate-spin" /></div>}>
+      <TechnicalOfficeLoginContent />
+    </Suspense>
+  )
+}
+
+function TechnicalOfficeLoginContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const areaId = searchParams.get("area")

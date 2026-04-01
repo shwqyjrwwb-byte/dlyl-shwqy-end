@@ -775,7 +775,7 @@ const departmentsData: Department[] = [
       {
         name: "هبه توفيق",
         position: "مسئولة تحويلات العهد والتشوينات - الإدارة المالية",
-        phone: "1151183223",
+        phone: "01151183223",
         image: "/images/heba-tawfik.jpeg",
       },
       // حسابات عملاء

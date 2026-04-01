@@ -807,7 +807,7 @@ const departmentsData: Department[] = [
         name: "الهام",
         position: "حسابات",
         phone: "01146929225",
-        image: "/images/placeholder.jpg",
+        image: "/images/الهام.jpeg",
       },
     ],
   },

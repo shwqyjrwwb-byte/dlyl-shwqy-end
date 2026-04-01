@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Phone, MapPin, Calendar, User } from "lucide-react"
@@ -36,7 +37,23 @@ export function QualitySchedule() {
   return (
     <section className="py-8 px-4">
       <div className="max-w-6xl mx-auto space-y-8">
-        {/* Engineers Cards */}
+
+        {/* صورة جدول مواعيد الجودة */}
+        <Card className="bg-card border-border overflow-hidden">
+          <div className="p-4 border-b border-border">
+            <h2 className="text-xl font-bold text-primary">جدول مواعيد زيارات الجودة</h2>
+          </div>
+          <div className="relative w-full">
+            <Image
+              src="/images/جدول مواعيد زيارات الجود.png"
+              alt="جدول مواعيد زيارات الجودة"
+              width={1200}
+              height={800}
+              className="w-full h-auto object-contain"
+              priority
+            />
+          </div>
+        </Card>
         <div className="grid md:grid-cols-2 gap-6">
           {qualityEngineers.map((engineer, index) => (
             <Card key={index} className="bg-card border-border p-6">

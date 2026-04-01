@@ -803,6 +803,12 @@ const departmentsData: Department[] = [
         phone: "1515494073",
         image: "/images/mohamed-salem-updated.jpeg",
       },
+      {
+        name: "الهام",
+        position: "حسابات",
+        phone: "01146929225",
+        image: "/images/placeholder.jpg",
+      },
     ],
   },
   {
@@ -906,9 +912,9 @@ const departmentsData: Department[] = [
       },
       {
         name: "ياسمين",
-        position: "سكرتيرة نجارة",
+        position: "سكرتيرة م/ محمد شوقي",
         phone: "01142677399",
-        image: "/images/placeholder.jpg",
+        image: "/images/ياسمين.jpeg",
       },
     ],
   },
@@ -968,7 +974,7 @@ const departmentsData: Department[] = [
         name: "م/ ايناس",
         position: "مهندسة مكتب فني",
         phone: "01208097317",
-        image: "/images/placeholder.jpg",
+        image: "/images/م-ايناس.jpeg",
       },
       {
         name: "م/ اسماء",
@@ -1307,7 +1313,7 @@ const departmentsData: Department[] = [
         name: "مينا",
         position: "قسم التجارة",
         phone: "01282985986",
-        image: "/images/placeholder.jpg",
+        image: "/images/م-مينا.jpeg",
       },
     ],
   },

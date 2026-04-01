@@ -7,7 +7,6 @@ import { WelcomeAvatar } from "@/components/welcome-avatar"
 import { GlobalSearch } from "@/components/global-search"
 import { PartnersMarquee } from "@/components/partners-marquee"
 import { PageBackgroundSlideshow } from "@/components/page-background-slideshow"
-import { ManagementChat } from "@/components/management-chat"
 import { BackgroundMusicPlayer } from "@/components/background-music-player"
 import { EmployeeProfileHeader } from "@/components/employee-profile-header"
 
@@ -92,8 +91,6 @@ function HomeContent() {
         <SectionsGrid />
 
         <PartnersMarquee />
-        
-        <ManagementChat />
       </div>
     </main>
   )

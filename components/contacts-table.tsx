@@ -191,7 +191,7 @@ const departmentsData: Department[] = [
         name: "م/ محمود عبد الغني (أفندينا)",
         position: "مدير قسم الجبس بورد والرخام",
         phone: "1278861380",
-        image: "/images/م محمود عبد الغني (أفندينا).jpg",
+        image: "/images/placeholder.jpg",
       },
       {
         name: "م/ محمد شوقي",
@@ -904,6 +904,12 @@ const departmentsData: Department[] = [
         phone: "0000000000",
         image: "/images/هشام فاهمي.jpeg",
       },
+      {
+        name: "ياسمين",
+        position: "سكرتيرة نجارة",
+        phone: "01142677399",
+        image: "/images/placeholder.jpg",
+      },
     ],
   },
   {
@@ -913,7 +919,7 @@ const departmentsData: Department[] = [
       name: "إسلام خالد",
       position: "مدير المكتب الفني",
       phone: "1156679887",
-      image: "/images/مهندس اسلام خالد.jpg",
+      image: "/images/placeholder.jpg",
     },
     team: [
       {
@@ -959,14 +965,16 @@ const departmentsData: Department[] = [
         image: "/images/مريم يوسف.jpeg",
       },
       {
-        name: "المهندسة آية البيه",
+        name: "م/ ايناس",
         position: "مهندسة مكتب فني",
-        phone: "",
+        phone: "01208097317",
+        image: "/images/placeholder.jpg",
       },
       {
-        name: "علاء فارس",
-        position: "مهندس مكتب فني",
-        phone: "0000000000",
+        name: "م/ اسماء",
+        position: "مهندسة مكتب فني",
+        phone: "01142960514",
+        image: "/images/placeholder.jpg",
       },
     ],
   },
@@ -1167,6 +1175,12 @@ const departmentsData: Department[] = [
         phone: "1115612784",
         image: "/images/d8-a7-d8-ad-d9-85-d8-af-20-d8-ae-d8-a7-d9-84-d8-af.jpeg",
       },
+      {
+        name: "م/ ايهاب",
+        position: "مدير تشغيل",
+        phone: "01111291411",
+        image: "/images/placeholder.jpg",
+      },
     ],
   },
   {
@@ -1281,6 +1295,19 @@ const departmentsData: Department[] = [
         position: "سيارة بيضاء - الأقاليم",
         phone: "01272705524",
         image: "/images/car-regions.jpeg",
+      },
+    ],
+  },
+  {
+    id: "commerce",
+    name: "التجارة",
+    manager: null,
+    team: [
+      {
+        name: "مينا",
+        position: "قسم التجارة",
+        phone: "01282985986",
+        image: "/images/placeholder.jpg",
       },
     ],
   },

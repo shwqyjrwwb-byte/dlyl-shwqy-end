@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import {
   Users, Activity, CheckCircle, Clock, XCircle,
   ArrowLeft, TrendingUp, Zap, Globe, Shield,
-  MessageSquare, Music, MapPin, Palette, Lock
+  Music, MapPin, Palette, Lock
 } from "lucide-react"
 
 interface Props {
@@ -15,13 +15,12 @@ interface Props {
 }
 
 const QUICK_ACTIONS = [
-  { id: "users",     label: "إدارة المستخدمين",  icon: Users,         color: "from-blue-500/20 to-blue-600/10",   border: "border-blue-500/30",   text: "text-blue-400" },
-  { id: "content",   label: "محرر المحتوى",       icon: Palette,       color: "from-purple-500/20 to-purple-600/10", border: "border-purple-500/30", text: "text-purple-400" },
-  { id: "areas",     label: "المناطق والروابط",   icon: MapPin,        color: "from-green-500/20 to-green-600/10",  border: "border-green-500/30",  text: "text-green-400" },
-  { id: "messaging", label: "قرارات الإدارة",     icon: MessageSquare, color: "from-pink-500/20 to-pink-600/10",    border: "border-pink-500/30",   text: "text-pink-400" },
-  { id: "access",    label: "التحكم بالوصول",     icon: Lock,          color: "from-red-500/20 to-red-600/10",      border: "border-red-500/30",    text: "text-red-400" },
-  { id: "system",    label: "مراقبة النظام",      icon: Activity,      color: "from-cyan-500/20 to-cyan-600/10",    border: "border-cyan-500/30",   text: "text-cyan-400" },
-  { id: "playlist",  label: "مشغل الموسيقى",      icon: Music,         color: "from-orange-500/20 to-orange-600/10", border: "border-orange-500/30", text: "text-orange-400" },
+  { id: "users",    label: "إدارة المستخدمين",  icon: Users,   color: "from-blue-500/20 to-blue-600/10",   border: "border-blue-500/30",   text: "text-blue-400" },
+  { id: "content",  label: "محرر المحتوى",       icon: Palette, color: "from-purple-500/20 to-purple-600/10", border: "border-purple-500/30", text: "text-purple-400" },
+  { id: "areas",    label: "المناطق والروابط",   icon: MapPin,  color: "from-green-500/20 to-green-600/10",  border: "border-green-500/30",  text: "text-green-400" },
+  { id: "access",   label: "التحكم بالوصول",     icon: Lock,    color: "from-red-500/20 to-red-600/10",      border: "border-red-500/30",    text: "text-red-400" },
+  { id: "system",   label: "مراقبة النظام",      icon: Activity, color: "from-cyan-500/20 to-cyan-600/10",   border: "border-cyan-500/30",   text: "text-cyan-400" },
+  { id: "playlist", label: "مشغل الموسيقى",      icon: Music,   color: "from-orange-500/20 to-orange-600/10", border: "border-orange-500/30", text: "text-orange-400" },
 ]
 
 export function DevOverview({ role, onNavigate }: Props) {

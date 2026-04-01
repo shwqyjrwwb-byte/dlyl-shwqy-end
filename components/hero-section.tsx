@@ -4,50 +4,74 @@ import { RamadanMarquee } from "./ramadan-marquee"
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-transparent">
-      <div className="w-full">
+      {/* Hero Image */}
+      <div className="w-full relative">
         <Image
           src="/images/دليل شوقي.png"
-          alt="دليل عائلة شوقي جروب - Eng. Ahmed Shawky - Founder"
+          alt="دليل شوقي جروب"
           width={1920}
           height={600}
           className="w-full h-auto object-cover"
           priority
           quality={100}
         />
+        {/* overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/60" />
       </div>
 
-      <div className="relative bg-background/80 backdrop-blur-sm py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-primary/20 rounded-full blur-3xl" />
+      {/* Content */}
+      <div className="relative bg-gradient-to-b from-background/90 to-background backdrop-blur-sm py-10 px-4">
+        {/* animated bg blobs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
         </div>
 
-        <div className="relative max-w-4xl mx-auto text-center">
-          {/* Welcome Message */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 sm:mb-6 leading-relaxed px-2">
-            مرحبا بكم في اكبر عائلة في مصر... عائلة شوقي جروب
-          </h1>
-
-          <div className="space-y-3 sm:space-y-4 text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto px-2">
-            <p className="text-primary/90 font-semibold text-base sm:text-lg md:text-xl">
-              هنا النجاح مش صدفة... النجاح نظام، والتزام، وروح شغل واحدة.
-            </p>
-
-            <p className="text-sm sm:text-base">المنصة دي اتعملت مخصوص علشانكم... علشان اي موظف جديد او قديم يلاقي كل اللي محتاجه في مكان واحد:</p>
-
-            <p className="text-muted-foreground/80 text-sm sm:text-base">
-              من اول القواعد العامة... للمواصفات الفنية... للجودة... لحد خطط التنفيذ المرحلية.
-            </p>
+        <div className="relative max-w-4xl mx-auto text-center space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-1.5">
+            <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+            <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">Shawky Group — Est. 2014</span>
           </div>
 
-          {/* Features */}
-          <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+          {/* Title */}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground leading-tight">
+            مرحباً بكم في{" "}
+            <span className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-clip-text text-transparent">
+              أكبر عائلة في مصر
+            </span>
+          </h1>
 
-          <p className="mt-6 sm:mt-8 md:mt-10 text-primary text-base sm:text-lg md:text-xl font-bold">يلا نشتغل... ونكبر سوا</p>
-          
-          {/* Ramadan Greeting Marquee */}
-          <div className="mt-6 sm:mt-8">
+          {/* Subtitle */}
+          <p className="text-primary/90 font-bold text-base sm:text-lg">
+            هنا النجاح مش صدفة... النجاح نظام، والتزام، وروح شغل واحدة.
+          </p>
+
+          <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            المنصة دي اتعملت مخصوص علشانكم — كل اللي محتاجه في مكان واحد:
+            من القواعد العامة، للمواصفات الفنية، للجودة، لحد خطط التنفيذ المرحلية.
+          </p>
+
+          {/* Stats row */}
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
+            {[
+              { value: "900+", label: "عميل" },
+              { value: "10+", label: "سنوات خبرة" },
+              { value: "6",   label: "مناطق" },
+              { value: "150+", label: "موظف" },
+            ].map((s, i) => (
+              <div key={i} className="flex flex-col items-center bg-white/5 border border-white/10 rounded-xl px-5 py-3 min-w-[80px]">
+                <span className="text-2xl font-black text-amber-400">{s.value}</span>
+                <span className="text-gray-500 text-xs font-semibold">{s.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-primary text-lg font-black">يلا نشتغل... ونكبر سوا 🚀</p>
+
+          {/* Marquee */}
+          <div className="pt-2">
             <RamadanMarquee />
           </div>
         </div>

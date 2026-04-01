@@ -36,7 +36,7 @@ export function getAllDepartmentEmployees() {
   const otherDepts = addOtherDepartments()
   const moreDepts = addMoreDepartments()
   
-  return [...allEmployees, ...moreEmployees, ...engineers, ...otherDepts, ...moreDepts, ...newEmployees].filter(emp => emp.phone && emp.phone !== "0000000000" && emp.phone !== "")
+  return [...allEmployees, ...moreEmployees, ...engineers, ...otherDepts, ...moreDepts, ...newEmployees()].filter(emp => emp.phone && emp.phone !== "0000000000" && emp.phone !== "")
 }
 
 // موظفون جدد

@@ -1236,7 +1236,7 @@ const departmentsData: Department[] = [
       name: "م/ محمود عبد الغني (أفندينا)",
       position: "مدير قسم الرخام والجبس بورد",
       phone: "1278861380",
-      image: "/images/م محمود عبد الغني (أفندينا).jpg",
+      image: "/images/placeholder.jpg",
     },
     team: [],
   },

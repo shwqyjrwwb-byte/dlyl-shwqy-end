@@ -1603,33 +1603,41 @@ export function ContactsTable() {
     <div className="container mx-auto px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8 relative">
       {/* Header */}
       <div className="text-center mb-10 relative">
-        {/* بانر رمضاني احترافي */}
-        <div className="mb-8 p-8 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 rounded-3xl shadow-2xl relative overflow-hidden">
-          {/* خلفية زخرفية */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 text-9xl">🌙</div>
-            <div className="absolute bottom-0 right-0 text-9xl">🏮</div>
+        {/* Professional Header */}
+        <div className="mb-8 relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0a0a0f] via-[#0d0d14] to-[#0a0a0f] border border-amber-500/20 p-8 shadow-2xl">
+          {/* animated bg */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
           </div>
-          
-          <div className="relative z-10">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="text-5xl animate-pulse">🌙</span>
-              <h2 className="text-4xl font-bold text-white drop-shadow-2xl">
-                رمضان كريم
-              </h2>
-              <span className="text-5xl animate-pulse">✨</span>
+          {/* grid lines */}
+          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "linear-gradient(rgba(245,158,11,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+
+          <div className="relative z-10 space-y-4">
+            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-1.5">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">Shawky Group — Directory</span>
             </div>
-            <p className="text-white text-xl font-semibold drop-shadow-lg">
-              كل عام وأنتم بخير
-            </p>
+            <h2 className="text-4xl md:text-5xl font-black">
+              <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
+                دليل جهات الاتصال
+              </span>
+            </h2>
+            <p className="text-gray-400 text-base font-semibold">تواصل مع أي عضو في العائلة فوراً</p>
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
+              {[
+                { value: "150+", label: "موظف" },
+                { value: "25+",  label: "قسم" },
+                { value: "6",    label: "منطقة" },
+              ].map((s, i) => (
+                <div key={i} className="bg-white/5 border border-amber-500/20 rounded-xl px-5 py-2 text-center">
+                  <p className="text-2xl font-black text-amber-400">{s.value}</p>
+                  <p className="text-gray-500 text-xs">{s.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        
-        <h1 className="text-4xl font-bold text-foreground mb-3 flex items-center justify-center gap-3">
-          <Phone className="w-10 h-10 text-primary" />
-          دليل جهات الاتصال
-        </h1>
-        <p className="text-muted-foreground text-lg">تواصل مع فريق العمل بسهولة</p>
       </div>
 
       {/* Search */}

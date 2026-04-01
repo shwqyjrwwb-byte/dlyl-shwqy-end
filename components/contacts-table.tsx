@@ -238,7 +238,7 @@ const departmentsData: Department[] = [
       {
         name: "هاجر عبد العزيز",
         position: "HR",
-        phone: "1000657652",
+        phone: "01222356977",
         image: "/images/hagar-abdelaziz.jpeg",
       },
       {

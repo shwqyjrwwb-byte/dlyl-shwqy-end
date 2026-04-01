@@ -953,9 +953,10 @@ const departmentsData: Department[] = [
         image: "/images/d9-85-20-d8-a7-d9-8a-d9-87-20-d9-86-d8-b9-d9-8a-d9-85-20.jpeg",
       },
       {
-        name: "فرح تامر محمد",
-        position: "مهندس مكتب فني",
-        phone: "1115473346",
+        name: "المهندسة آية البيه",
+        position: "مهندسة مكتب فني",
+        phone: "",
+        image: "/images/ايه البيه.jpeg",
         image: "/images/d9-85-d9-81-d8-b1-d8-ad-20-d8-aa-d8-a7-d9-85-d8-b1.jpeg",
       },
       {

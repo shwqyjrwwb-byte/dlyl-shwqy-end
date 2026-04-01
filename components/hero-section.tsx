@@ -1,21 +1,18 @@
-import Image from "next/image"
 import { RamadanMarquee } from "./ramadan-marquee"
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-transparent">
-      {/* Hero Image */}
+      {/* Hero Video */}
       <div className="w-full relative">
-        <Image
-          src="/images/دليل شوقي.png"
-          alt="دليل شوقي جروب"
-          width={1920}
-          height={600}
+        <video
+          src="/images/بنار.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-auto object-cover"
-          priority
-          quality={100}
         />
-        {/* overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/60" />
       </div>
 

@@ -1,4 +1,4 @@
-// استخراج جميع الموظفين من الأقسام (بدون رئيس مجلس الإدارة ونائبه)
+﻿// استخراج جميع الموظفين من الأقسام (بدون رئيس مجلس الإدارة ونائبه)
 export function getAllDepartmentEmployees() {
   const allEmployees = [
     // مكتب م/ أحمد شوقي
@@ -36,7 +36,18 @@ export function getAllDepartmentEmployees() {
   const otherDepts = addOtherDepartments()
   const moreDepts = addMoreDepartments()
   
-  return [...allEmployees, ...moreEmployees, ...engineers, ...otherDepts, ...moreDepts].filter(emp => emp.phone && emp.phone !== "0000000000" && emp.phone !== "")
+  return [...allEmployees, ...moreEmployees, ...engineers, ...otherDepts, ...moreDepts, ...newEmployees].filter(emp => emp.phone && emp.phone !== "0000000000" && emp.phone !== "")
+}
+
+// موظفون جدد
+function newEmployees() {
+  return [
+    { name: "م/ ايهاب",  position: "مدير تشغيل",       phone: "01111291411", image: "/images/placeholder.jpg", department: "التشغيل" },
+    { name: "مينا",       position: "قسم التجارة",       phone: "01282985986", image: "/images/placeholder.jpg", department: "التجارة" },
+    { name: "م/ ايناس",  position: "مهندسة مكتب فني",   phone: "01208097317", image: "/images/placeholder.jpg", department: "المكتب الفني" },
+    { name: "ياسمين",    position: "سكرتيرة نجارة",     phone: "01142677399", image: "/images/placeholder.jpg", department: "النجارة" },
+    { name: "م/ اسماء",  position: "مهندسة مكتب فني",   phone: "01142960514", image: "/images/placeholder.jpg", department: "المكتب الفني" },
+  ]
 }
 
 // إضافة مهندسين الشركة
@@ -206,5 +217,16 @@ export function addMoreDepartments() {
     
     // السيارات
     { name: "عزام", position: "مسؤول السيارات", phone: "01111108751", image: "/images/azzam.jpeg", department: "السيارات" },
+  ]
+}
+
+// موظفون جدد
+export function addNewEmployees() {
+  return [
+    { name: "م/ ايهاب", position: "مدير تشغيل", phone: "01111291411", image: "/images/placeholder.jpg", department: "التشغيل" },
+    { name: "مينا", position: "قسم التجارة", phone: "01282985986", image: "/images/placeholder.jpg", department: "التجارة" },
+    { name: "م/ ايناس", position: "مهندسة مكتب فني", phone: "01208097317", image: "/images/placeholder.jpg", department: "المكتب الفني" },
+    { name: "ياسمين", position: "سكرتيرة نجارة", phone: "01142677399", image: "/images/placeholder.jpg", department: "النجارة" },
+    { name: "م/ اسماء", position: "مهندسة مكتب فني", phone: "01142960514", image: "/images/placeholder.jpg", department: "المكتب الفني" },
   ]
 }

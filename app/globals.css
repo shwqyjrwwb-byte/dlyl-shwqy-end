@@ -145,13 +145,13 @@
   animation-play-state: paused;
 }
 
-/* Ramadan marquee animation - moves from right to left */
+/* Marquee animation - moves from left to right */
 @keyframes marquee-rtl {
   0% {
-    transform: translateX(0);
+    transform: translateX(-33.333%);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(0);
   }
 }
 

@@ -300,6 +300,12 @@ const departmentsData: Department[] = [
         phone: "1122587005",
         image: "/images/مؤمن مصطفي.jpeg",
       },
+      {
+        name: "سلو صبري",
+        position: "Social Media",
+        phone: "01154837163",
+        image: "/images/placeholder.jpg",
+      },
     ],
   },
   {
@@ -687,6 +693,12 @@ const departmentsData: Department[] = [
         phone: "1140479394",
         image: "/images/محمود ابو زيد.jpeg",
       },
+      {
+        name: "م/ محمد فضل",
+        position: "مهندس - الإسكندرية",
+        phone: "01094158218",
+        image: "/images/placeholder.jpg",
+      },
       
       // قسم الجودة
       {
@@ -809,6 +821,12 @@ const departmentsData: Department[] = [
         phone: "01146929225",
         image: "/images/الهام.jpeg",
       },
+      {
+        name: "هدي",
+        position: "حسابات",
+        phone: "01140754199",
+        image: "/images/placeholder.jpg",
+      },
     ],
   },
   {
@@ -897,6 +915,18 @@ const departmentsData: Department[] = [
         position: "عامل مصنع النجارة",
         phone: "1127148438",
         image: "/images/عمرو هشام.jpeg",
+      },
+      {
+        name: "مجدي رياض",
+        position: "نجارة",
+        phone: "01200816156",
+        image: "/images/placeholder.jpg",
+      },
+      {
+        name: "م/ بشوي بخيت",
+        position: "مهندس نجارة",
+        phone: "01273710670",
+        image: "/images/placeholder.jpg",
       },
       {
         name: "محمد أبو النجا",

@@ -483,6 +483,37 @@ export default function HomePage() {
       }
     }
 
+    // التحقق من اليوزرات المضافة من لوحة التحكم (API)
+    try {
+      const apiRes = await fetch("/api/custom-users")
+      const apiData = await apiRes.json()
+      if (apiData.success && apiData.users) {
+        const apiUser = apiData.users.find((u: any) => u.userId === userId && u.password === password)
+        if (apiUser) {
+          localStorage.setItem("userLoggedIn", "true")
+          localStorage.setItem("userId", userId)
+          saveLoginCredentials(userId, password)
+          localStorage.setItem("employeeData", JSON.stringify({
+            name: apiUser.name,
+            position: apiUser.position || "موظف",
+            department: apiUser.department || "",
+            image: null
+          }))
+          localStorage.setItem("loginTime", new Date().toISOString())
+          try {
+            await fetch("/api/users/online", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ userId, userName: apiUser.name, userPosition: apiUser.position || "موظف" }),
+            })
+          } catch {}
+          router.push("/home")
+          setIsLoading(false)
+          return
+        }
+      }
+    } catch {}
+
     setError("ID أو كلمة المرور غير صحيحة")
     setIsLoading(false)
   }

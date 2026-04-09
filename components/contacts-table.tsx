@@ -1164,7 +1164,7 @@ const departmentsData: Department[] = [
     id: "ceramics",
     name: "السيراميك",
     manager: {
-      name: "محمد يسري",
+      name: "محمد يسري عبد الخالق",
       position: "مدير قسم السيراميك",
       phone: "1101605351",
       image: "/images/mohamed-yosry.jpeg",

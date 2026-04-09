@@ -1164,10 +1164,10 @@ const departmentsData: Department[] = [
     id: "ceramics",
     name: "السيراميك",
     manager: {
-      name: "محمد يحيي عبدالحميد عبد الرازق",
-      position: "مسؤول قسم السيراميك",
-      phone: "1101946616",
-      image: "/images/mohamed-yahya.jpeg",
+      name: "محمد يسري",
+      position: "مدير قسم السيراميك",
+      phone: "1101605351",
+      image: "/images/mohamed-yosry.jpeg",
     },
     team: [
       {
@@ -1177,10 +1177,10 @@ const departmentsData: Department[] = [
         image: "/images/omnia-mostafa-new.jpeg",
       },
       {
-        name: "محمد يسري",
-        position: "مدير قسم السيراميك",
-        phone: "1101605351",
-        image: "/images/mohamed-yosry.jpeg",
+        name: "محمد يحيي عبدالحميد عبد الرازق",
+        position: "موظف سيراميك",
+        phone: "1101946616",
+        image: "/images/mohamed-yahya.jpeg",
       },
     ],
   },

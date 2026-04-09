@@ -1178,7 +1178,7 @@ const departmentsData: Department[] = [
       },
       {
         name: "محمد يسري",
-        position: "منسق سيراميك",
+        position: "مدير قسم السيراميك",
         phone: "1101605351",
         image: "/images/mohamed-yosry.jpeg",
       },

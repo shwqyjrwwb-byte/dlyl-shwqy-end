@@ -12,8 +12,12 @@ const cairo = Cairo({
 })
 
 export const metadata: Metadata = {
-  title: "منصة شوقي جروب - دليل الموظف",
-  description: "منصة شوقي جروب الداخلية للموظفين - التشطيبات والديكور",
+  title: "دليل شوقي جروب - منصة الموظفين",
+  description: "منصة شوقي جروب الداخلية للموظفين - التشطيبات الفاخرة والديكور الداخلي",
+  keywords: "شوقي جروب, تشطيبات, ديكور, مقاولات, مصر",
+  authors: [{ name: "Shawky Group" }],
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  themeColor: "#f59e0b",
   icons: {
     icon: [
       { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
